@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CasaOS Portal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin:0; padding:30px;
+        font-family: 'Inter', sans-serif;
+        background:#eef1f5;
+        color:#222;
+    }
+
+    h1 { font-size:32px; font-weight:700; margin-bottom:10px; }
+    h2 { margin-top:40px; font-size:22px; font-weight:600; color:#333; }
+
+    .grid {
+        display:flex;
+        flex-wrap:wrap;
+        gap:22px;
+        margin-top:15px;
+    }
+
+    .tile {
+        width:170px;
+        background:white;
+        border-radius:18px;
+        padding:22px 10px;
+        text-align:center;
+        text-decoration:none;
+        color:#333;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+        transition:0.25s ease;
+        border:1px solid #e6e6e6;
+        position:relative;
+    }
+
+    .tile:hover {
+        transform:translateY(-6px);
+        box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .tile i {
+        font-size:40px;
+        margin-bottom:12px;
+        color:#4a8cff;
+    }
+
+    .tile span {
+        font-size:15px;
+        font-weight:600;
+    }
+
+    .status {
+        position:absolute;
+        top:10px;
+        right:10px;
+        padding:4px 8px;
+        border-radius:12px;
+        font-size:12px;
+        font-weight:600;
+        color:white;
+    }
+
+    .online { background:#2ecc71; }
+    .offline { background:#e74c3c; }
+    .loading { background:#f1c40f; }
+</style>
+</head>
+
+<body>
+
+<h1>CasaOS Home Portal</h1>
+<p>Live status for all apps on your server.</p>
+
+<!-- MEDIA -->
+<h2>🎬 Media & Entertainment</h2>
+<div class="grid">
+    <a class="tile" href="http://emby.local" data-url="http://emby.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-tv"></i><span>Emby</span>
+    </a>
+
+    <a class="tile" href="http://novidrome.local" data-url="http://novidrome.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-music"></i><span>Navidrome</span>
+    </a>
+
+    <a class="tile" href="http://audiobookshelf.local" data-url="http://audiobookshelf.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-book"></i><span>Audiobookshelf</span>
+    </a>
+</div>
+
+<!-- UTILITIES -->
+<h2>🛠 System Tools</h2>
+<div class="grid">
+    <a class="tile" href="http://btop.local" data-url="http://btop.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-gauge-high"></i><span>Btop</span>
+    </a>
+
+    <a class="tile" href="http://glances.local" data-url="http://glances.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-chart-line"></i><span>Glances</span>
+    </a>
+
+    <a class="tile" href="http://myspeed.local" data-url="http://myspeed.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-gauge"></i><span>MySpeed</span>
+    </a>
+
+    <a class="tile" href="http://pihole.local" data-url="http://pihole.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-shield-halved"></i><span>Pi-hole</span>
+    </a>
+</div>
+
+<!-- FILES -->
+<h2>📁 Files & Notes</h2>
+<div class="grid">
+    <a class="tile" href="http://filebrowser.local" data-url="http://filebrowser.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-folder-open"></i><span>Filebrowser</span>
+    </a>
+
+    <a class="tile" href="http://obsidian.local" data-url="http://obsidian.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-note-sticky"></i><span>Obsidian</span>
+    </a>
+
+    <a class="tile" href="http://wallabag.local" data-url="http://wallabag.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-bookmark"></i><span>Wallabag</span>
+    </a>
+</div>
+
+<!-- DASHBOARDS -->
+<h2>📊 Dashboards</h2>
+<div class="grid">
+    <a class="tile" href="http://dashy.local" data-url="http://dashy.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-table"></i><span>Dashy</span>
+    </a>
+
+    <a class="tile" href="http://flame.local" data-url="http://flame.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-fire"></i><span>Flame</span>
+    </a>
+
+    <a class="tile" href="http://freshrss.local" data-url="http://freshrss.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-rss"></i><span>FreshRSS</span>
+    </a>
+</div>
+
+<!-- ADMIN -->
+<h2>💻 Admin & Dev</h2>
+<div class="grid">
+    <a class="tile" href="http://portainer.local" data-url="http://portainer.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-boxes-stacked"></i><span>Portainer</span>
+    </a>
+
+    <a class="tile" href="http://trillium.local" data-url="http://trillium.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-brain"></i><span>Trilium</span>
+    </a>
+
+    <a class="tile" href="http://brave.local" data-url="http://brave.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-browser"></i><span>Brave</span>
+    </a>
+</div>
+
+<!-- COOKING -->
+<h2>🍽 Cooking</h2>
+<div class="grid">
+    <a class="tile" href="http://tandoor.local" data-url="http://tandoor.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-utensils"></i><span>Tandoor</span>
+    </a>
+</div>
+
+<!-- MISC -->
+<h2>📦 Misc</h2>
+<div class="grid">
+    <a class="tile" href="http://archiveboc.local" data-url="http://archiveboc.local">
+        <div class="status loading">...</div>
+        <i class="fa-solid fa-box-archive"></i><span>ArchiveBOC</span>
+    </a>
+</div>
+
+<script>
+async function checkStatus(tile) {
+    const url = tile.getAttribute("data-url");
+    const statusEl = tile.querySelector(".status");
+
+    try {
+        const controller = new AbortController();
+        setTimeout(() => controller.abort(), 3000);
+
+        await fetch(url, { method: "GET", signal: controller.signal });
+
+        statusEl.textContent = "Online";
+        statusEl.className = "status online";
+    } catch {
+        statusEl.textContent = "Offline";
+        statusEl.className = "status offline";
+    }
+}
+
+function runStatusChecks() {
+    document.querySelectorAll(".tile").forEach(tile => {
+        const statusEl = tile.querySelector(".status");
+        statusEl.textContent = "...";
+        statusEl.className = "status loading";
+        checkStatus(tile);
+    });
+}
+
+runStatusChecks();
+setInterval(runStatusChecks, 10000);
+</script>
+
+</body>
+</html>
