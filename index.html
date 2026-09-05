@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dharani CasaOS Portal</title>
+<title>Dharani CasaOS Portal — Tailscale Only</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -58,65 +58,79 @@
         background:#22c55e !important;
         box-shadow:0 0 10px rgba(34,197,94,0.8) !important;
     }
+    .banner {
+        background:#334155;
+        padding:12px 18px;
+        border-radius:12px;
+        margin-bottom:20px;
+        font-size:14px;
+        border:1px solid #475569;
+    }
 </style>
 </head>
 
 <body>
 
 <h1>Dharani CasaOS Portal</h1>
-<p>Auto‑status enabled · Real IP: <strong>100.117.187.24</strong></p>
+<div class="banner">
+    <strong>Tailscale‑Only Mode Enabled</strong> — All services require Tailnet access.<br>
+    Tailscale IP: <strong>100.117.187.24</strong>
+</div>
 
 <!-- MEDIA -->
 <h2>🎬 Media & Entertainment</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Emby.local"><i class="fa-solid fa-tv"></i><span>Emby</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Novidrome.local"><i class="fa-solid fa-music"></i><span>Navidrome</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Audiobookshelf.local"><i class="fa-solid fa-book"></i><span>Audiobookshelf</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8096"><i class="fa-solid fa-tv"></i><span>Emby</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="4533"><i class="fa-solid fa-music"></i><span>Navidrome</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="13378"><i class="fa-solid fa-book"></i><span>Audiobookshelf</span><div class="status-dot"></div></a>
 </div>
 
 <!-- KNOWLEDGE -->
 <h2>📚 Knowledge & Notes</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Archiveboc.local"><i class="fa-solid fa-box-archive"></i><span>ArchiveBox</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Wallabag.local"><i class="fa-solid fa-bookmark"></i><span>Wallabag</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Trillium.local"><i class="fa-solid fa-brain"></i><span>Trilium</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Obsidian.local"><i class="fa-solid fa-note-sticky"></i><span>Obsidian</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Freshrss.local"><i class="fa-solid fa-rss"></i><span>FreshRSS</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8000"><i class="fa-solid fa-box-archive"></i><span>ArchiveBox</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8080"><i class="fa-solid fa-bookmark"></i><span>Wallabag</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="37840"><i class="fa-solid fa-brain"></i><span>Trilium</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="27123"><i class="fa-solid fa-note-sticky"></i><span>Obsidian</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8081"><i class="fa-solid fa-rss"></i><span>FreshRSS</span><div class="status-dot"></div></a>
 </div>
 
 <!-- SYSTEM -->
 <h2>🛠 System Tools</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Glances.local"><i class="fa-solid fa-chart-line"></i><span>Glances</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Btop.local"><i class="fa-solid fa-gauge-high"></i><span>Btop</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Myspeed.local"><i class="fa-solid fa-gauge"></i><span>MySpeed</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24/admin:9090" data-host="pihole.local"><i class="fa-solid fa-shield-halved"></i><span>Pi-hole</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Portainer.local"><i class="fa-solid fa-boxes-stacked"></i><span>Portainer</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="61208"><i class="fa-solid fa-chart-line"></i><span>Glances</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8888"><i class="fa-solid fa-gauge-high"></i><span>Btop</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="5210"><i class="fa-solid fa-gauge"></i><span>MySpeed</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24/admin" data-port="9090"><i class="fa-solid fa-shield-halved"></i><span>Pi-hole</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="9443"><i class="fa-solid fa-boxes-stacked"></i><span>Portainer</span><div class="status-dot"></div></a>
 </div>
 
 <!-- FILES -->
 <h2>📁 Files & Dashboards</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Filebrowser.local"><i class="fa-solid fa-folder-open"></i><span>Filebrowser</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Flame.local"><i class="fa-solid fa-fire"></i><span>Flame</span><div class="status-dot"></div></a>
-    <a class="tile" href="http://100.117.187.24" data-host="Dashy.local"><i class="fa-solid fa-table"></i><span>Dashy</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8082"><i class="fa-solid fa-folder-open"></i><span>Filebrowser</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="5005"><i class="fa-solid fa-fire"></i><span>Flame</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="4000"><i class="fa-solid fa-table"></i><span>Dashy</span><div class="status-dot"></div></a>
 </div>
 
 <!-- COOKING -->
 <h2>🍽 Cooking</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Tandoor.local"><i class="fa-solid fa-utensils"></i><span>Tandoor</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="8083"><i class="fa-solid fa-utensils"></i><span>Tandoor</span><div class="status-dot"></div></a>
 </div>
 
 <!-- BROWSER -->
 <h2>🌐 Browser Tools</h2>
 <div class="grid">
-    <a class="tile" href="http://100.117.187.24" data-host="Brave.local"><i class="fa-solid fa-browser"></i><span>Brave</span><div class="status-dot"></div></a>
+    <a class="tile" href="http://100.117.187.24" data-port="3001"><i class="fa-solid fa-browser"></i><span>Brave</span><div class="status-dot"></div></a>
 </div>
 
 <script>
 async function checkStatus(tile) {
-    const url = tile.getAttribute("href");
+    const ip = "100.117.187.24";
+    const port = tile.getAttribute("data-port");
+    const url = `http://${ip}:${port}`;
+
     try {
         const controller = new AbortController();
         setTimeout(() => controller.abort(), 3000);
